@@ -12,6 +12,7 @@ export async function activate(context: vscode.ExtensionContext) {
   console.log(
     'Congratulations, your extension "vscode-javascript-react-next-typescript-snippets" is now active!'
   );
+
   await generateSnippets();
   // The command has been defined in the package.json file
   // Now provide the implementation of the command with registerCommand

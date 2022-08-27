@@ -1,0 +1,20 @@
+{
+  "importReact": {
+    "key": "importReact",
+    "prefix": "imr",
+    "body": ["import React from 'react'"],
+    "scope": "typescript,typescriptreact,javascript,javascriptreact"
+  },
+  "importReactDom": {
+    "key": "importReactDom",
+    "prefix": "imrd",
+    "body": ["import ReactDOM from 'react-dom'"],
+    "scope": "typescript,typescriptreact,javascript,javascriptreact"
+  },
+  "importReactWithComponent": {
+    "key": "importReactWithComponent",
+    "prefix": "imrc",
+    "body": ["import React, { Component } from 'react'"],
+    "scope": "typescript,typescriptreact,javascript,javascriptreact"
+  }
+}

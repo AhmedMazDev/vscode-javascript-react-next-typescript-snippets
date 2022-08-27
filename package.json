@@ -10,7 +10,12 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:vscode-javascript-react-next-typescript-snippets.helloWorld"
+    "onCommand:vscode-javascript-react-next-typescript-snippets.helloWorld",
+    "onStartupFinished",
+    "onLanguage:typescript",
+    "onLanguage:typescriptReact",
+    "onLanguage:javascript",
+    "onLanguage:javascriptReact"
   ],
   "main": "./dist/extension.js",
   "contributes": {
