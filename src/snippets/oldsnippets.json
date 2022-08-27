@@ -1,0 +1,72 @@
+{
+  "forEach": {
+    "key": "forEach",
+    "prefix": "fre",
+    "body": ["${1:first}.forEach(${2:second} => {${3:third}})"],
+    "description": "Creates a forEach statement",
+    "scope": "typescript,typescriptreact,javascript,javascriptreact"
+  },
+  "forOf": {
+    "key": "forOf",
+    "prefix": "fof",
+    "body": ["for(let ${1:first} of ${2:second}) {${3:third}}"],
+    "description": "Iterating over property names of iterable objects",
+    "scope": "typescript,typescriptreact,javascript,javascriptreact"
+  },
+  "forIn": {
+    "key": "forIn",
+    "prefix": "fin",
+    "body": ["for(let ${1:first} in ${2:second}) {${3:third}}"],
+    "description": "Iterating over property values of iterable objects",
+    "scope": "typescript,typescriptreact,javascript,javascriptreact"
+  },
+  "import": {
+    "key": "import",
+    "prefix": "imp",
+    "body": ["import ${2:second} from '${1:first}'"],
+    "scope": "typescript,typescriptreact,javascript,javascriptreact",
+    "description": "import moduleName from 'module'"
+  },
+  "importNoModuleName": {
+    "key": "importNoModuleName",
+    "prefix": "imn",
+    "body": ["import '${1:first}'"],
+    "scope": "typescript,typescriptreact,javascript,javascriptreact",
+    "description": "import 'module'"
+  },
+  "importDestructing": {
+    "key": "importDestructing",
+    "prefix": "imd",
+    "body": ["import { ${2:second} } from '${1:first}'"],
+    "scope": "typescript,typescriptreact,javascript,javascriptreact",
+    "description": "import { destructuredModule } from 'module'"
+  },
+  "exportDefault": {
+    "key": "exportDefault",
+    "prefix": "exp",
+    "body": ["export default ${1:first}"],
+    "scope": "typescript,typescriptreact,javascript,javascriptreact",
+    "description": "export default moduleName"
+  },
+  "exportDestructing": {
+    "key": "exportDestructing",
+    "prefix": "exd",
+    "body": ["export { ${2:second} } from '${1:first}'"],
+    "scope": "typescript,typescriptreact,javascript,javascriptreact",
+    "description": "export { destructuredModule } from 'module'"
+  },
+  "consoleLog": {
+    "key": "consoleLog",
+    "prefix": "clg",
+    "body": ["console.log(${1:first})"],
+    "description": "Displays a message in the console",
+    "scope": "typescript,typescriptreact,javascript,javascriptreact"
+  },
+  "consoleLogObject": {
+    "key": "consoleLogObject",
+    "prefix": "clo",
+    "body": ["console.log('${1:first} : ', ${1:first})"],
+    "description": "Logs property with name.",
+    "scope": "typescript,typescriptreact,javascript,javascriptreact"
+  }
+}

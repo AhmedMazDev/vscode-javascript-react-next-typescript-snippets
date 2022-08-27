@@ -17,7 +17,34 @@
     "commands": [
       {
         "command": "vscode-javascript-react-next-typescript-snippets.helloWorld",
-        "title": "Hello World"
+        "title": "Snippet search"
+      }
+    ],
+    "configuration": {
+      "properties": {
+        "snippets.settings.classComponents": {
+          "type": "boolean",
+          "markdownDescription": "Include React Class Based Components",
+          "default": "false"
+        }
+      }
+    },
+    "snippets": [
+      {
+        "language": "javascript",
+        "path": "./src/snippets/generatedSnippets.json"
+      },
+      {
+        "language": "javascriptreact",
+        "path": "./src/snippets/generatedSnippets.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./src/snippets/generatedSnippets.json"
+      },
+      {
+        "language": "typescriptreact",
+        "path": "./src/snippets/generatedSnippets.json"
       }
     ]
   },
