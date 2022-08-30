@@ -2,7 +2,7 @@
   "name": "vscode-javascript-react-next-typescript-snippets",
   "displayName": "vscode-javascript-react-next-typescript-snippets",
   "description": "A minimal handful of Javascript/Typescript/React and NextJs snippets",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "engines": {
     "vscode": "^1.70.0"
   },
@@ -10,8 +10,16 @@
     "type": "git",
     "url": "https://github.com/AhmedMazDev/vscode-javascript-react-next-typescript-snippets"
   },
+  "keywords": [
+    "snippets",
+    "react",
+    "customizable",
+    "javascript",
+    "typescript",
+    "NextJs"
+  ],
   "categories": [
-    "Other"
+    "Snippets"
   ],
   "activationEvents": [
     "onCommand:vscode-javascript-react-next-typescript-snippets.helloWorld",
