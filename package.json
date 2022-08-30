@@ -22,6 +22,8 @@
     "onLanguage:javascriptReact"
   ],
   "main": "./dist/extension.js",
+  "publisher": "AhmedMaz",
+  "icon": "images/logo.png",
   "contributes": {
     "commands": [
       {

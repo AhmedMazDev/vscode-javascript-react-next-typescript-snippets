@@ -4,7 +4,7 @@ JavaScript, React and NextJs snippets with Typescript support for [VS Code](http
 
 ## Installation
 
-### Install From Visual Studio Marketplace 👉 [HERE](https://www.google.com/)
+### Install From Visual Studio Marketplace 👉 [HERE](https://marketplace.visualstudio.com/items?itemName=AhmedMaz.vscode-javascript-react-next-typescript-snippets)
 
 ## Options
 
