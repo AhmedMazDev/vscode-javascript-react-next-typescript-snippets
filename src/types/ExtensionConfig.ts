@@ -1,5 +1,5 @@
 export interface ExtensionConfig {
-  classBasedComponents: boolean;
+  typescript: boolean;
   languageScopes: string;
   typescriptPropsStatePrefix: string;
 }

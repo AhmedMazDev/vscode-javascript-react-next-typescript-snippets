@@ -27,10 +27,10 @@
     ],
     "configuration": {
       "properties": {
-        "snippets.settings.classComponents": {
+        "snippets.settings.typescript": {
           "type": "boolean",
-          "markdownDescription": "Include React Class Based Components",
-          "default": "false"
+          "markdownDescription": "Include Typescript Snippets",
+          "default": true
         },
         "snippets.settings.languageScopes": {
           "type": "string",

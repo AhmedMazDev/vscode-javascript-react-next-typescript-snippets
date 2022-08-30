@@ -8,8 +8,18 @@ import { replaceSnippetsPlaceholders } from "./replaceSnippetsPlaceholders";
 import ImportsSnippets from "../sourceSnippets/Javascript/import";
 import ExportSnippets from "../sourceSnippets/Javascript/export";
 import OtherSnippets from "../sourceSnippets/Javascript/others";
+import TypescriptComponentsSnippets from "../sourceSnippets/Typescript/React/components";
+import HooksTypescriptSnippets from "../sourceSnippets/Typescript/React/hooks";
+import ExportTypescriptSnippets from "../sourceSnippets/Typescript/export";
+import NextImportsSnippets from "../sourceSnippets/Javascript/NextJs/imports";
+import NextFunctionsSnippets from "../sourceSnippets/Javascript/NextJs/functions";
+import NextApiSnippets from "../sourceSnippets/Javascript/NextJs/api";
+import NextTypescriptApiSnippets from "../sourceSnippets/Typescript/NextJs/api";
+import NextTypescriptFunctionsSnippets from "../sourceSnippets/Typescript/NextJs/functions";
 
 export const getAllSnippets = () => {
+  const config = getExtensionConfig();
+
   const allSnippets = [
     ...ImportsSnippets,
     ...ExportSnippets,
@@ -18,9 +28,16 @@ export const getAllSnippets = () => {
     ...ImportReactSnippets,
     ...HooksSnippets,
     ...ComponentsSnippets,
+    ...NextImportsSnippets,
+    ...NextFunctionsSnippets,
+    ...NextApiSnippets,
+    ...(config.typescript ? TypescriptComponentsSnippets : []),
+    ...(config.typescript ? HooksTypescriptSnippets : []),
+    ...(config.typescript ? ExportTypescriptSnippets : []),
+    ...(config.typescript ? NextTypescriptApiSnippets : []),
+    ...(config.typescript ? NextTypescriptFunctionsSnippets : []),
   ];
 
-  const config = getExtensionConfig();
   const snippets = allSnippets.reduce((acc, snippet) => {
     acc[snippet.key] = Object.assign(snippet, {
       ...snippet,
@@ -29,8 +46,6 @@ export const getAllSnippets = () => {
     });
     return acc;
   }, {} as Snippets);
-
-  console.log("snippets:", snippets);
 
   return snippets;
 };
