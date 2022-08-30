@@ -31,6 +31,20 @@
           "type": "boolean",
           "markdownDescription": "Include React Class Based Components",
           "default": "false"
+        },
+        "snippets.settings.languageScopes": {
+          "type": "string",
+          "markdownDescription": "defines the language scopes for which the snippets will be available.\nUse comma separated values.\nFor example: `typescript,typescriptreact,javascript,javascriptreact`",
+          "default": "typescript,typescriptreact,javascript,javascriptreact"
+        },
+        "snippets.settings.typescriptPropsStatePrefix": {
+          "type": "string",
+          "markdownDescription": "Controls which prefix for typescript snippets should use for props/state.",
+          "default": "type",
+          "enum": [
+            "type",
+            "interface"
+          ]
         }
       }
     },

@@ -1,20 +1,9 @@
 import { writeFile } from "fs";
 import path = require("path");
-import ImportSnippets from "../sourceSnippets/imports";
-import { Snippets } from "../types/Snippet";
-
-const getAllSnippets = () => {
-  return [...ImportSnippets];
-};
+import { getAllSnippets } from "./getAllSnippets";
 
 const generateSnippets = async () => {
-  const snippets = getAllSnippets().reduce((acc, snippet) => {
-    acc[snippet.key] = Object.assign(snippet, {
-      ...snippet,
-      scope: "typescript,typescriptreact,javascript,javascriptreact",
-    });
-    return acc;
-  }, {} as Snippets);
+  const snippets = getAllSnippets();
 
   new Promise((resolve) => {
     writeFile(
