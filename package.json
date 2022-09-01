@@ -1,8 +1,8 @@
 {
   "name": "vscode-javascript-react-next-typescript-snippets",
-  "displayName": "vscode-javascript-react-next-typescript-snippets",
+  "displayName": "React/NextJs/JS/Typescript snippets",
   "description": "A minimal handful of Javascript/Typescript/React and NextJs snippets",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "engines": {
     "vscode": "^1.70.0"
   },
