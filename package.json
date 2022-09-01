@@ -2,9 +2,15 @@
   "name": "vscode-javascript-react-next-typescript-snippets",
   "displayName": "vscode-javascript-react-next-typescript-snippets",
   "description": "A minimal handful of Javascript/Typescript/React and NextJs snippets",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "engines": {
     "vscode": "^1.70.0"
+  },
+  "capabilities": {
+    "virtualWorkspaces": true,
+    "untrustedWorkspaces": {
+      "supported": true
+    }
   },
   "repository": {
     "type": "git",
@@ -33,12 +39,6 @@
   "publisher": "AhmedMaz",
   "icon": "images/logo.png",
   "contributes": {
-    "commands": [
-      {
-        "command": "vscode-javascript-react-next-typescript-snippets.helloWorld",
-        "title": "Snippet search"
-      }
-    ],
     "configuration": {
       "properties": {
         "snippets.settings.typescript": {
@@ -65,32 +65,29 @@
     "snippets": [
       {
         "language": "javascript",
-        "path": "./src/snippets/generatedSnippets.json"
+        "path": "./dist/snippets/generatedSnippets.json"
       },
       {
         "language": "javascriptreact",
-        "path": "./src/snippets/generatedSnippets.json"
+        "path": "./dist/snippets/generatedSnippets.json"
       },
       {
         "language": "typescript",
-        "path": "./src/snippets/generatedSnippets.json"
+        "path": "./dist/snippets/generatedSnippets.json"
       },
       {
         "language": "typescriptreact",
-        "path": "./src/snippets/generatedSnippets.json"
+        "path": "./dist/snippets/generatedSnippets.json"
       }
     ]
   },
   "scripts": {
-    "vscode:prepublish": "yarn run package",
-    "compile": "webpack",
-    "watch": "webpack --watch",
-    "package": "webpack --mode production --devtool hidden-source-map",
-    "compile-tests": "tsc -p . --outDir out",
-    "watch-tests": "tsc -p . -w --outDir out",
-    "pretest": "yarn run compile-tests && yarn run compile && yarn run lint",
-    "lint": "eslint src --ext ts",
-    "test": "node ./out/test/runTest.js"
+    "vscode:prepublish": "yarn compile",
+    "compile": "rm -rf dist; tsc -p ./ --noEmit false --module commonjs --outDir dist",
+    "compile:dev": "rm -rf dist; tsc -p ./ --noEmit false --module commonjs --outDir dist",
+    "lint": "eslint --ext .js,.ts,.tsx ./src/",
+    "watch": "tsc -watch -p ./",
+    "typescript": "tsc --noEmit"
   },
   "devDependencies": {
     "@types/glob": "^7.2.0",
